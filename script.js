@@ -7,6 +7,7 @@ start: while (true) {
     let lossesCount = 0;
     let tiesCount = 0;
 
+    var resultText = "";
 
     for (let i = 0; i < 5; i++) {
 
@@ -19,25 +20,27 @@ start: while (true) {
             alert("This is not valid input!");
         } else {
 
-            //document.getElementById("results").innerHTML = "You choose: " + userChoice + " & Computer choose: " + camputerChoice;
-
+            resultText += "<br> You choose: " + userChoice + " & Computer choose: " + camputerChoice;
             console.log("You choose:", userChoice, "& Computer choose:", camputerChoice);
 
 
-
+            resultText += " As a result:";
             switch (userChoice) {
                 case "r":
                     switch (camputerChoice) {
                         case "r":
                             tiesCount++;
+                            resultText += "This is Tie";
                             console.log("This is Tie");
                             break;
                         case "p":
                             lossesCount++;
+                            resultText += "You losse!";
                             console.log("You losse!");
                             break;
                         case "s":
                             winsCount++;
+                            resultText += "You Win!";
                             console.log("You Win!");
                             break;
                         default:
@@ -50,14 +53,17 @@ start: while (true) {
                     switch (camputerChoice) {
                         case "p":
                             tiesCount++;
+                            resultText += "This is Tie";
                             console.log("This is Tie");
                             break;
                         case "s":
                             lossesCount++;
+                            resultText += "You losse!";
                             console.log("You losse!");
                             break;
                         case "r":
                             winsCount++;
+                            resultText += "You Win!";
                             console.log("You Win!");
                             break;
                         default:
@@ -70,14 +76,17 @@ start: while (true) {
                     switch (camputerChoice) {
                         case "s":
                             tiesCount++;
+                            resultText += "This is Tie";
                             console.log("This is Tie");
                             break;
                         case "r":
                             lossesCount++;
+                            resultText += "You losse!";
                             console.log("You losse!");
                             break;
                         case "p":
                             winsCount++;
+                            resultText += "You Win!";
                             console.log("You Win!");
                             break;
                         default:
@@ -94,9 +103,9 @@ start: while (true) {
 
 
     }
-
+    document.getElementById("results").innerHTML = resultText;
     let playAgain = prompt("Play again?");
-    if (playAgain) {
+    if (playAgain && playAgain !== "no" && playAgain !== "No") {
         continue start;
         break;
     } else {
