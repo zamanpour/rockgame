@@ -2,4 +2,4 @@
 
 - This is our Group game (Yasha Zamanpour, Harry Holder, & Darwin Michell)
 
-You can check it in 
+You can check it in https://zamanpour.github.io/rockgame/
