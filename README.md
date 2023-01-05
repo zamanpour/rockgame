@@ -1,1 +1,5 @@
-# rockgame
+# Rock-Paper-Scissors Game
+
+- This is our Group game (Yasha Zamanpour, Harry Holder, & Darwin Michell)
+
+You can check it in 

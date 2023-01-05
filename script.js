@@ -1,19 +1,18 @@
 var choices = ["r", "p", "s"];
+var resultText = "";
 
-var j = 0;
 start: while (true) {
 
     let winsCount = 0;
     let lossesCount = 0;
     let tiesCount = 0;
 
-    var resultText = "";
 
     for (let i = 0; i < 5; i++) {
 
         let userChoice = prompt("please enter r, p, or s");
 
-        let computerRand = Math.floor(Math.random() * 3);
+        let computerRand = Math.floor(Math.random() * choices.length);
         let camputerChoice = choices[computerRand];
 
         if (!choices.includes(userChoice)) {
